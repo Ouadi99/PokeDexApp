@@ -1,11 +1,55 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useState, useCallback, useEffect } from "react";
-import { StyleSheet, Text, View, FlatList, Image } from "react-native";
+import * as React from "react";
+import { Text, View, TextInput,StyleSheet,Button,ScrollView,Pressable, ViewStyle, StyleProp,RouteProp,FlatList,StatusBar, Image } from "react-native";
+import { NavigationContainer, useNavigation, useRoute } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
+import {useState, useEffect} from "react";
+import { FontAwesome } from "@expo/vector-icons";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // npm i react-native-debugger
 
+const HomeScreen = () => {
+  const navigation : any = useNavigation();
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Rainbow</Text>
+      <Button title="Ga naar de PokeDex" onPress={() => navigation.navigate("PokeDex")}/>
+    </View>
+  );
+}
+const Map = () => {
 
-export default function App() {
+  return (
+    <text></text>
+  );
+}
+const TabScreens =() => {
+  return (
+    <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} options={{
+            tabBarIcon: ({color, size}) => <FontAwesome name="home" size={size} color={color}/>
+            
+        }} 
+        />
+        <Tab.Screen name="Pokemon" component={Pokemon}
+         options={{
+            tabBarIcon: ({color, size}) => <MaterialCommunityIcons name="numeric-4-box" size={size} color={color} />
+        }} 
+        />
+        <Tab.Screen name="Map" component={Map}
+         options={{
+            tabBarIcon: ({color, size}) => <MaterialCommunityIcons name="numeric-5-box" size={size} color={color} />
+        }} 
+        />
+      </Tab.Navigator>
+  )
+}
+
+const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
+const Pokemon = () => {
   const [pokemonDetails, setPokemonDetails] = useState([]);
   useEffect(() => {
       const fetchPokemons = async () => {
@@ -25,7 +69,8 @@ export default function App() {
             }};
             fetchPokemons();
       }, []);
-
+      const Stack = createNativeStackNavigator();
+      
   const renderPokemon = ({ item }) => {
     return (
       <View style={{
@@ -68,6 +113,7 @@ export default function App() {
         item.types[0].type.name == "steel" ? "#2D2E2F" :"#75515B"
         
       }}>
+       
         <View style={{flex: 1, flexDirection : "row", justifyContent: "space-between", alignItems: "stretch"}}>
             <View style={{flex: 1, flexDirection : "column", justifyContent: "center"}}>
                <Text style={styles.pokemonTitle}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)} </Text>
@@ -86,6 +132,18 @@ export default function App() {
     </View>
   );
 }
+const App = () => {
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="App" component={TabScreens} options={{ headerShown: false }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
