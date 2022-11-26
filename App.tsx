@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, View, TextInput,StyleSheet,Button,ScrollView,Pressable, ViewStyle, StyleProp,RouteProp,FlatList,StatusBar, Image } from "react-native";
+import { Text, View, TextInput,StyleSheet,Button,ScrollView,Pressable, ViewStyle, StyleProp,RouteProp,FlatList,StatusBar, Image, ImageBackground } from "react-native";
 import { NavigationContainer, useNavigation, useRoute } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -12,10 +12,15 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const HomeScreen = () => {
   const navigation : any = useNavigation();
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Rainbow</Text>
-      <Button title="Ga naar de PokeDex" onPress={() => navigation.navigate("PokeDex")}/>
+    <View style={ styles.main }>
+      <ImageBackground source={require('./assets/HomeBG.jpeg')} style={styles.backgroundImage}>
+        <View style={styles.containerHome}>
+        <Text>Rainbow</Text>
+        <Button title="Ga naar de PokeDex" onPress={() => navigation.navigate("PokeDex")}/>
+        </View>
+      </ImageBackground>
     </View>
+
   );
 }
 const Map = () => {
@@ -28,18 +33,20 @@ const TabScreens =() => {
   return (
     <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} options={{
-            tabBarIcon: ({color, size}) => <FontAwesome name="home" size={size} color={color}/>
+            headerShown: false,
+            tabBarIcon: ({color, size}) => <Image source={require('./assets/menuIcon.png')} style={{marginTop:'10%'}} />
             
         }} 
         />
-        <Tab.Screen name="Pokemon" component={Pokemon}
+        <Tab.Screen name="PokeDex" component={Pokemon}
          options={{
-            tabBarIcon: ({color, size}) => <MaterialCommunityIcons name="numeric-4-box" size={size} color={color} />
+            
+            tabBarIcon: ({color, size}) => <Image source={require('./assets/pokedex.png')} style={{marginTop:'10%'}} />
         }} 
         />
-        <Tab.Screen name="Map" component={Map}
+        <Tab.Screen name="'''" component={Map}
          options={{
-            tabBarIcon: ({color, size}) => <MaterialCommunityIcons name="numeric-5-box" size={size} color={color} />
+            tabBarIcon: ({color, size}) => <Image source={require('./assets/pokeMap.png')} style={{marginTop:'10%'}} />
         }} 
         />
       </Tab.Navigator>
@@ -146,11 +153,24 @@ const App = () => {
 export default App;
 
 const styles = StyleSheet.create({
-  container: {
+  backgroundImage: {
     flex: 1,
+    resizeMode: 'cover',
     justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: "#fff",
+  },
+  main: {
+    flex: 1,
+  },
+  containerHome: {
+    backgroundColor: 'rgba(48,89,141,0.9)',
+    margin: '15%',
+    borderRadius: '10%',
+    padding: '5%',
+    marginTop: '100%',
+    color: 'white'
+  },
+  container: {
+
   },
   pokemonContainer: { 
     // backgroundColor: wantedSpeed == 0 ? "#000000" : item.sprites.front_default >= 5 ? "#280e19" : "#0c1322" , 
