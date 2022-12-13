@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, View, TextInput,StyleSheet,Button,ScrollView,Pressable, ViewStyle, StyleProp,RouteProp,FlatList,StatusBar, Image } from "react-native";
+import { Text, View, TextInput,StyleSheet,Button,ScrollView,Pressable, ViewStyle, StyleProp, FlatList,StatusBar, Image } from "react-native";
 import { NavigationContainer, useNavigation, useRoute } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from '@expo/vector-icons';

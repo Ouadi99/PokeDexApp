@@ -9,7 +9,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // npm i react-native-debugger
 import HomeScreen from "./screens/Home";
-import Pokedex from "./screens/Pokedex3";
+import Pokedex from "./screens/Pokedex";
 
 const Map = () => {
   return (
