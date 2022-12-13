@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, View, TextInput,StyleSheet,Button,ScrollView,Pressable, ViewStyle, StyleProp,RouteProp,FlatList,StatusBar, Image, ImageBackground } from "react-native";
+import { Text, View, TextInput,StyleSheet,Button,ScrollView,Pressable, ViewStyle, StyleProp,FlatList,StatusBar, Image, ImageBackground } from "react-native";
 import { NavigationContainer, useNavigation, useRoute } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -9,7 +9,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // npm i react-native-debugger
 import HomeScreen from "./screens/Home";
-import Pokedex from "./screens/Pokedex";
+import Pokedex from "./screens/Pokedex3";
 
 const Map = () => {
   return (
