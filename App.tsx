@@ -11,6 +11,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screens/Home";
 import Pokedex from "./screens/Pokedex";
 
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs([
+  "Overwriting fontFamily style attribute preprocessor"
+]);
+
 const Map = () => {
   return (
     <text>Test</text>
