@@ -10,6 +10,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // npm i react-native-debugger
 import HomeScreen from "./screens/Home";
 import Pokedex from "./screens/Pokedex";
+import PokeMap from "./screens/PokeMap"
 
 import { LogBox } from 'react-native';
 LogBox.ignoreLogs([
@@ -39,7 +40,7 @@ const TabScreens =() => {
             tabBarIcon: ({color, size}) => <Image source={require('./assets/pokedex.png')} style={{marginTop:'10%'}} />
         }} 
         />
-        <Tab.Screen name="Map" component={Map}
+        <Tab.Screen name="PokeMap" component={PokeMap}
          options={{
             tabBarIcon: ({color, size}) => <Image source={require('./assets/pokeMap.png')} style={{marginTop:'10%'}} />
         }} 
