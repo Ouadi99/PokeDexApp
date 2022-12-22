@@ -25,24 +25,24 @@ const Detail = () => {
       case "steel":          color =  "#B8B9C6";   break;
     }
     let color2 = "#A8A878";
-    switch (route.params?.type) {
-      case "grass":          color =  "#A7DB8D";   break;
-      case "fire":           color =  "#F08030";   break;
-      case "water":          color =  "#6890F0";   break;
-      case "bug":            color =  "#88950C";   break;
-      case "dark":           color =  "#7C7D81";   break;
-      case "dragon":         color =  "#7662E0";   break;
-      case "electric":       color =  "#FAE078";   break;
-      case "fairy":          color =  "#FFB8CC";   break;
-      case "fighting":       color =  "#C03028";   break;
-      case "flying":         color =  "#C6B7F5";   break;
-      case "ghost":          color =  "#A292BC";   break;
-      case "ground":         color =  "#EBD69D";   break;
-      case "ice":            color =  "#BCE6E6";   break;
-      case "poison":         color =  "#A040A0";   break;
-      case "psycic":         color =  "#FA92B2";   break;
-      case "rock":           color =  "#B39E51";   break;
-      case "steel":          color =  "#B8B9C6";   break;
+    switch (route.params?.type2) {
+      case "grass":          color2 =  "#A7DB8D";   break;
+      case "fire":           color2 =  "#F08030";   break;
+      case "water":          color2 =  "#6890F0";   break;
+      case "bug":            color2 =  "#88950C";   break;
+      case "dark":           color2 =  "#7C7D81";   break;
+      case "dragon":         color2 =  "#7662E0";   break;
+      case "electric":       color2 =  "#FAE078";   break;
+      case "fairy":          color2 =  "#FFB8CC";   break;
+      case "fighting":       color2 =  "#C03028";   break;
+      case "flying":         color2 =  "#C6B7F5";   break;
+      case "ghost":          color2 =  "#A292BC";   break;
+      case "ground":         color2 =  "#EBD69D";   break;
+      case "ice":            color2 =  "#BCE6E6";   break;
+      case "poison":         color2 =  "#A040A0";   break;
+      case "psycic":         color2 =  "#FA92B2";   break;
+      case "rock":           color2 =  "#B39E51";   break;
+      case "steel":          color2 =  "#B8B9C6";   break;
     }
     let borderPokemonColor = "#75515B";
     switch (route.params?.type) {
@@ -120,42 +120,7 @@ const Detail = () => {
                   flex: 1,
                   padding: 5,
                   textAlign: "center",
-                  backgroundColor:
-                    route.params?.type2 == "grass"
-                      ? "#4E8234"
-                      : route.params?.type2 == "fire"
-                      ? "#F08030"
-                      : route.params?.type2 == "water"
-                      ? "#6890F0"
-                      : route.params?.type2 == "bug"
-                      ? "#A8B820"
-                      : route.params?.type2 == "dark"
-                      ? "#7C7D81"
-                      : route.params?.type2 == "dragon"
-                      ? "#7662E0"
-                      : route.params?.type2 == "electric"
-                      ? "#FAE078"
-                      : route.params?.type2 == "fairy"
-                      ? "#FFB8CC"
-                      : route.params?.type2 == "fighting"
-                      ? "#C03028"
-                      : route.params?.type2 == "flying"
-                      ? "#C6B7F5"
-                      : route.params?.type2 == "ghost"
-                      ? "#A292BC"
-                      : route.params?.type2 == "ground"
-                      ? "#EBD69D"
-                      : route.params?.type2 == "ice"
-                      ? "#BCE6E6"
-                      : route.params?.type2 == "poison"
-                      ? "#A040A0"
-                      : route.params?.type2 == "psychic"
-                      ? "#FA92B2"
-                      : route.params?.type2 == "rock"
-                      ? "#B39E51"
-                      : route.params?.type2 == "steel"
-                      ? "#B8B9C6"
-                      : "#A8A878",
+                   backgroundColor: color2
                 }}
               >
                 {route.params?.type2.charAt(0).toUpperCase() +
@@ -188,7 +153,7 @@ const Detail = () => {
 
           <View
             style={{
-              backgroundColor: color2
+              backgroundColor: color
             }}
           >
             <View style={styles.whiteBox}>
