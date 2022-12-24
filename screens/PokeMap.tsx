@@ -73,14 +73,14 @@ const PokeMapScreen = () => {
             >
                 <Image 
                 source={require('../assets/pokeball.jpeg')}
-                style={{width: 26, height: 28}}
+                style={{width: 26, height: 26}}
                 resizeMode="contain"/>
                 <Callout>
                     <View>
                         <Image
                             style={{height:200,width:200}}
                             source={{
-                            uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${item.id}.png`}}
+                            uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.id}.png`}}
                         />
                     </View>
                 </Callout>
