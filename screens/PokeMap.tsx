@@ -34,7 +34,7 @@ const PokeMapScreen = () => {
     const generateMarkers = useCallback((lat: number, long: number) => {
         const markersArray = []
 
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 50; i++) {
             markersArray.push({
                 id: i,
                 latitude: getRandomLatitude(lat - 0.05, lat + 0.05),
