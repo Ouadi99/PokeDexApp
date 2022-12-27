@@ -4,7 +4,7 @@
     "slug": "labo1",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/pokedex.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",

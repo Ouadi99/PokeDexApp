@@ -3743,6 +3743,11 @@
     "agent-base" "6"
     "debug" "4"
 
+"hypertrack-sdk-react-native@^8.2.2":
+  "integrity" "sha512-+PMuzGaBo0KRCimibQpGMkGChhxMpX1AmQPvGq1D3vGPG2FEodpB/uWfneDplIqOioaEJwVweJjJU2zEsy4mBA=="
+  "resolved" "https://registry.npmjs.org/hypertrack-sdk-react-native/-/hypertrack-sdk-react-native-8.2.2.tgz"
+  "version" "8.2.2"
+
 "hyphenate-style-name@^1.0.2":
   "integrity" "sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ=="
   "resolved" "https://registry.npmjs.org/hyphenate-style-name/-/hyphenate-style-name-1.0.4.tgz"
