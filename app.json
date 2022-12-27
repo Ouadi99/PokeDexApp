@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "labo1",
-    "slug": "labo1",
+    "name": "PokeDex",
+    "slug": "pokedex",
     "version": "1.0.0",
+    "description": "An app you can use as pokedex, with map included",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

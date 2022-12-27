@@ -147,7 +147,7 @@ const Detail = () => {
             />
             <Image
               style={styles.pokemonSprite}
-              source={{ uri: route.params?.spriteFrontShiny }}
+              source={{ uri: route.params?.spriteBackShiny }}
             />
           </View>
 
