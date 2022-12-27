@@ -9,7 +9,6 @@ import {useContext, useState, useEffect} from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Detail from "./Details"
-import TypeColor from "./Color"
 import { json } from "react-router-dom";
 
 

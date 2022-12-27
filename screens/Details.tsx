@@ -20,7 +20,7 @@ const Detail = () => {
       case "ground":         color =  "#EBD69D";   break;
       case "ice":            color =  "#BCE6E6";   break;
       case "poison":         color =  "#A040A0";   break;
-      case "psycic":         color =  "#FA92B2";   break;
+      case "psychic":        color =  "#FA92B2";   break;
       case "rock":           color =  "#B39E51";   break;
       case "steel":          color =  "#B8B9C6";   break;
     }
@@ -40,7 +40,7 @@ const Detail = () => {
       case "ground":         color2 =  "#EBD69D";   break;
       case "ice":            color2 =  "#BCE6E6";   break;
       case "poison":         color2 =  "#A040A0";   break;
-      case "psycic":         color2 =  "#FA92B2";   break;
+      case "psychic":        color2 =  "#FA92B2";   break;
       case "rock":           color2 =  "#B39E51";   break;
       case "steel":          color2 =  "#B8B9C6";   break;
     }
@@ -60,7 +60,7 @@ const Detail = () => {
       case "ground":         borderPokemonColor  =  "#997353";   break;
       case "ice":            borderPokemonColor  =  "#528AAE";   break;
       case "poison":         borderPokemonColor  =  "#37013F";   break;
-      case "psycic":         borderPokemonColor  =  "#A13959";   break;
+      case "psychic":        borderPokemonColor  =  "#A13959";   break;
       case "rock":           borderPokemonColor  =  "#B39E51";   break;
       case "steel":          borderPokemonColor  =  "#787887";   break;     
     }
@@ -147,7 +147,7 @@ const Detail = () => {
             />
             <Image
               style={styles.pokemonSprite}
-              source={{ uri: route.params?.spriteFrontShiny }}
+              source={{ uri: route.params?.spriteBackShiny }}
             />
           </View>
 
