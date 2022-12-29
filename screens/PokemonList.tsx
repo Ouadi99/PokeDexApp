@@ -208,7 +208,12 @@ const Pokemon = () => {
                     <Pressable
                       onPress={() => {
                         for (var i = 0; i < pokemonFavorites.length; i++) {
-                          pokemonFavorites.splice(i, 1);
+                          if(pokemonFavorites[i].name == item.name)
+                          {
+                            pokemonFavorites.splice(i, 1);
+                            console.log("test") 
+                          }
+                          console.log(item.name);
                         }
                         storeData();
                         console.log("Hij word verwijderd");
