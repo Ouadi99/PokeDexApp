@@ -264,13 +264,7 @@ const Pokemon = () => {
         return (
           <View style={styles.container}>
             <TextInput
-              style={{
-                alignSelf: "center",
-                padding: 10,
-                width: "100%",
-                fontSize: 20,
-                borderBottomWidth: 5,
-              }}
+              style={styles.pokemonSearch}
               placeholder="Search Pokemon"
               clearButtonMode="always"
               onChangeText={(value) => setSearchFilter(value)}
@@ -342,6 +336,15 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
     justifyContent: "flex-end",
   },
+  pokemonSearch:
+  {
+      alignSelf: "center",
+      paddingTop: 15,
+      padding: 10,
+      width: "100%",
+      fontSize: 20,
+      borderBottomWidth: 5,
+  }
 });
 
 
